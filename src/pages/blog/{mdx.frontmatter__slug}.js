@@ -10,7 +10,7 @@ const BlogPost = ({ data, children }) => {
 	return (
 		<Layout pageTitle={data.mdx.frontmatter.title}>
 			<p>{data.mdx.frontmatter.date}</p>
-			<GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
+			<GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />{" "}
 			<p>
 				Photo Credit: <a href={data.mdx.frontmatter.hero_image_credit_link}>{data.mdx.frontmatter.hero_image_credit_text}</a>
 			</p>
@@ -24,12 +24,12 @@ export const query = graphql`
 		mdx(id: { eq: $id }) {
 			frontmatter {
 				title
-				date(formatString: "MMMM D, YYYY")
+				date(formatString: "MMMM DD, YYYY")
 				hero_image_alt
 				hero_image_credit_link
 				hero_image_credit_text
 				hero_image {
-					childrenImageSharp {
+					childImageSharp {
 						gatsbyImageData
 					}
 				}
