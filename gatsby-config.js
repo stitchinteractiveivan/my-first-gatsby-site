@@ -16,5 +16,6 @@ module.exports = {
 		"gatsby-remark-images",
 		"gatsby-remark-prismjs",
 		"gatsby-remark-autolink-headers",
+		"gatsby-transformer-sharp",
 	],
-};
+}
